@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/tables.css"> 
+        <link rel="stylesheet" href="css/index.css"> 
+        <title>HOME</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- Sidebar -->
+            <div id="sidebar" class="sidebaroff" >
+                <header>
+                    <img id="logo" src="assets/rooster.svg" alt="imagen logo de login" >
+                </header>
+                    <div id="menuToggle">
+                      <input id="burgercheckbox" type="checkbox" />
+                      <span></span>
+                      <span id="span2"></span>
+                      <span></span>
+                    </div>
+                
+                <div id="sidebarloader" class="loader off"></div>
+                <ul id="sidebarnav" class="nav">
+                </ul>
+            </div>
+            <div id="viewbox">
+                <div id="navbar">
+                    <div id="burger"></div>
+                    <div id="versioninfo"></div>
+                    <div id="userbox">
+                        <section id="userboxinfo">
+                            <div id="userboxemail">
+                                saidjoc@gmail.com
+                            </div>
+                            <div id="userboxrol">
+                                Administrador
+                            </div>
+                        </section>
+                        <div id="userboxlogoutbtn" class="btn-12">
+                            <svg focusable="false" preserveAspectRatio="xMidYMid meet" 
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" 
+                                width="16" height="16" viewBox="0 0 32 32" 
+                                aria-hidden="true">
+                                <circle cx="16" cy="8" r="2"></circle>
+                                <circle cx="16" cy="16" r="2"></circle>
+                                <circle cx="16" cy="24" r="2"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="navbaropt">
+                        <form action="/logout" method="post">
+                            <button>Cerrar Sesion</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="contentbox">
+                    <div id="contentboxloader" class="loader off"></div>
+
+                    <div id="addcontentbox">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <script src="javascript/styleEvents.js"></script>
+        <script src="javascript/htmlmanager.js"></script>
+        <script src="javascript/index.js"></script>
+    </body>
+</html>
