@@ -8,8 +8,13 @@ const api       = require("../apiServices/index.js")    ;
 var express = require("express");
 var router  = express.Router();
 
-router.use ( "/api"     ,             api       );
-router.use ( "/home"       ,home      );
+
+router.use ( "/"     ,(req,res,next)=>{ // only for test
+    res.redirect("/home");
+} );
+
+router.use ( "/api"     ,api  );
+router.use ( "/home"    ,home );
 //#router.use ( "/home"    ,  isAuth    ,home      );
 //router.use ( "/login"   ,  isAuth2   ,login     );
 //router.use ( "/logout"  ,  isAuth    ,logout    );

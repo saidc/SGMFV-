@@ -11,38 +11,16 @@ var getSidebarItems = async(req, res)=>{
     ];
     return res.status(200).json({error:false, res:msg});
 }
-/*
+
 var getUsers = async(req, res)=>{
     const {PosicionFila , NoFilas,json} = req.body;
-    //console.log(PosicionFila ,NoFilas);
-    user.getNumberOfUsuarios((error, results, fields)=>{
-        if(error){
-            return res.status(200).json({error:true, res:error});
-        }else{
-            var NumRows = results[0].NumRow;
-            user.getUsuariosPosNoRows(PosicionFila ,NoFilas,(error, results, fields)=>{
-                if(error){
-                    return res.status(200).json({error:true, res:error});
-                }else{
-                    //console.log(results); 
-                    var msg = {
-                        name:Usuario_id,
-                        num:NumRows, 
-                        res:results
-                    };
-                    return res.status(200).json({error:false, res:msg});
-                }
-            });
-        } 
-    });
-}*/
-var getUsers = async(req, res)=>{
-    const {PosicionFila , NoFilas,json} = req.body;
+
     var results = [
         {content: "Alerta1" , id:"1" , description: "random description 1"},
         {content: "Alerta2" , id:"2" , description: "random description 2"},
         {content: "Alerta3" , id:"3" , description: "random description 3"}
     ];
+
     var msg = {
         name:Usuario_id,
         num:results.length, 
@@ -51,31 +29,6 @@ var getUsers = async(req, res)=>{
     return res.status(200).json({error:false, res:msg});
 }
 
-/*
-var getVehicles = async(req, res)=>{
-    const {PosicionFila ,NoFilas,json} = req.body;
-    //console.log(PosicionFila ,NoFilas);
-    vehiculo.getNumberOfVehiculos((error, results, fields)=>{
-        if(error){
-            return res.status(200).json({error:true, res:error});
-        }else{ 
-            var NumRows = results[0].NumRow;
-            vehiculo.getVehiculosPosNoRows(0,10,(error, results, fields)=>{
-                if(error){
-                    return res.status(200).json({error:true, res:error});
-                }else{
-                    var msg = {
-                        name:Vehiculo_id,
-                        num:NumRows, 
-                        res:results
-                    };
-                    return res.status(200).json({error:false, res:msg});
-                }
-            });
-        }
-    });
-}
-*/
 var getVehicles = async(req, res)=>{
     const {PosicionFila ,NoFilas,json} = req.body;
     var results = [
